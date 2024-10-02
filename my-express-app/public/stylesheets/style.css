@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.myform {
+  display: flex;
+  gap: 10px;
+}
+
+.label-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.submit-button button {
+  margin-top: 15px;
+  width: 14.3rem;
+  height: 1.5rem;
+}
