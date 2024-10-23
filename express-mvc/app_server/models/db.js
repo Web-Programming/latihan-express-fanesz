@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+require("./mahasiswa");
 
 const dbURI = 'mongodb://localhost:27017/pawii-si5c';
 mongoose.connect(dbURI, {  });
