@@ -18,6 +18,7 @@ import { HousingLocation } from '../housing-location';
       <p class="listing-location">
         {{ housingLocation.city }}, {{ housingLocation.state }}
       </p>
+      <p class="listing-unit">{{ housingLocation.availableUnits }} Unit(s)</p>
       <a [routerLink]="['/details', housingLocation.id]">Learn More</a>
     </section>
   `,

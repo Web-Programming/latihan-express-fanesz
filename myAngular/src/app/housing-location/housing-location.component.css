@@ -22,6 +22,11 @@
   content: url("/location-pin.svg") / "";
 }
 
+.listing-unit {
+  padding-left: 20px;
+  padding-bottom: 5px;
+}
+
 section.listing a {
   padding-left: 20px;
   text-decoration: none;
