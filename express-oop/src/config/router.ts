@@ -12,6 +12,10 @@ class Router {
     this.app.use(this.snakeCaseHandler());
     this.app.use(express.json());
     this.app.use(express.urlencoded({ extended: true }));
+    this.app.use((_: Request, res: Response, next: NextFunction) => {
+      res.header("Access-Control-Allow-Origin", "*");
+      next();
+    });
 
     this.port = Number(env.get("BE_PORT"));
   }
