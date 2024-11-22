@@ -11,7 +11,7 @@ import { HousingLocation } from '../housing-location';
     <section class="listing">
       <img
         class="listing-photo"
-        [src]="housingLocation.photo"
+        [src]="this.baseUrl + housingLocation.photo"
         alt="Exterior photo of {{ housingLocation.name }}"
       />
       <h2 class="listing-heading">{{ housingLocation.name }}</h2>
@@ -26,4 +26,5 @@ import { HousingLocation } from '../housing-location';
 })
 export class HousingLocationComponent {
   @Input() housingLocation!: HousingLocation;
+  readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
 }

@@ -19,7 +19,7 @@ class HousingService extends BaseService<HousingDto> {
   }
 
   public async getHousingById(id: string): Promise<HousingDto | ServiceError> {
-    const housing = await this.findOne({ _id: id });
+    const housing = await this.findOne({ id: Number(id) });
     if (!housing) {
       return this.throwError("Error getting housing", StatusBadRequest);
     }
