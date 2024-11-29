@@ -1,19 +1,12 @@
-let mongoose = require("mongoose");
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
-let schemaMhs = new mongoose.Schema({
+const mahasiswaSchema = new Schema({
   nama: String,
-  npm: {
-    type: String,
-    require: true,
-  },
-  email: {
-    type: String,
-    require: true,
-  },
-  tanggal_lahir: {
-    type: Date,
-  },
+  npm: { type: String, required: true },
+  email: { type: String, required: true },
+  tanggal_lahir: Date,
   aktif: Boolean,
 });
 
-mongoose.model("Mahasiswa", schemaMhs);
+mongoose.model('Mahasiswa', mahasiswaSchema);

@@ -1,9 +1,13 @@
 const index = (req, res) => {
-  res.render('index', { title: 'Express' }); 
-}; 
+  res.render('index', { title: 'Express' });
+};
 
-const kontak = (req, res) => {
-  res.render('kontak', { title: 'Kontak' }); 
-}; 
+const contact = (req, res) => {
+  res.render('contact', {
+    title: 'Contact',
+    name: 'Rendy Pratama',
+    email: 'rendypratama752@gmail.com',
+  });
+};
 
-module.exports = { index, kontak }; 
+module.exports = { index, contact };

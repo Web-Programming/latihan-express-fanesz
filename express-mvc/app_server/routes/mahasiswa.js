@@ -1,12 +1,11 @@
 var express = require('express');
 var router = express.Router();
+const mahasiswaController = require('../controllers/mahasiswa');
 
-const mhsController = require('../controllers/mahasiswa');
-
-router.get("/", mhsController.index); //list mahasiswa
-router.post("/insert", mhsController.insert); //insert mahasiswa
-router.patch("/update/:id", mhsController.update); //mengupdate mahasiswa
-router.get("/show/:id", mhsController.show); //show detail mahasiswa by id
-router.delete("/delete/:id", mhsController.destroy); //delete mahasiswa by id
+router.get('/index', mahasiswaController.index);
+router.post('/insert', mahasiswaController.insert);
+router.patch('/update/:id', mahasiswaController.update);
+router.get('/show/:id', mahasiswaController.show);
+router.delete('/delete/:id', mahasiswaController.destroy);
 
 module.exports = router;
