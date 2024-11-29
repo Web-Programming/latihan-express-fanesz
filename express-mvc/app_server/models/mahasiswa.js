@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const mahasiswaSchema = new Schema({
@@ -9,4 +9,5 @@ const mahasiswaSchema = new Schema({
   aktif: Boolean,
 });
 
-mongoose.model('Mahasiswa', mahasiswaSchema);
+const Mahasiswa = mongoose.model("Mahasiswa", mahasiswaSchema);
+module.exports = Mahasiswa;
